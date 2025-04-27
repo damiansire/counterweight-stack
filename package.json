@@ -1,25 +1,44 @@
 {
   "name": "counterweight-stack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "build": "tsc",
-    "prepare": "npm run build"
-  },
+  "version": "0.0.1",
+  "description": "A LIFO stack implementation where popping requires a specific counterweight element.",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damiansire/counterweight-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/damiansire/counterweight-stack/issues"
+  },
+  "homepage": "https://github.com/damiansire/counterweight-stack#readme",
+  "keywords": [
+    "stack",
+    "data structure",
+    "lifo",
+    "counterweight",
+    "typescript"
+  ],
+  "author": "damian sire <damiansirecontacto@gmail.com>",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.15.2",
     "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
     "ts-jest": "^29.3.2",
     "typescript": "^5.8.3"
   },
